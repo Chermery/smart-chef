@@ -1,0 +1,32 @@
+name: Build Vite App
+
+on:
+  workflow_dispatch:    # 可以手动触发构建
+  push:
+    branches:
+      - main            # 提交到 main 分支时自动构建
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload dist folder
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
