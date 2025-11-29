@@ -12,27 +12,30 @@
         font-family: 'Inter', sans-serif;
         background-color: #f3f4f6;
       }
-
+      
       /* Custom animations for the prep techniques */
+      
       @keyframes chop {
         0% { transform: translateY(0) rotate(0deg); }
         50% { transform: translateY(-10px) rotate(-10deg); }
         100% { transform: translateY(0) rotate(0deg); }
       }
+      
       .animate-chop {
         animation: chop 0.5s ease-in-out infinite;
       }
-
+      
       @keyframes stir {
         0% { transform: rotate(0deg) translateX(0); }
         25% { transform: rotate(10deg) translateX(5px); }
         75% { transform: rotate(-10deg) translateX(-5px); }
         100% { transform: rotate(0deg) translateX(0); }
       }
+      
       .animate-stir {
         animation: stir 1s linear infinite;
       }
-
+      
       @keyframes shake {
         0% { transform: translate(1px, 1px) rotate(0deg); }
         10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -46,19 +49,24 @@
         90% { transform: translate(1px, 2px) rotate(0deg); }
         100% { transform: translate(1px, -2px) rotate(-1deg); }
       }
+      
       .animate-shake-pan {
         animation: shake 2s infinite;
       }
       
       /* Hide scrollbar for horizontal scrolling areas */
+      
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
+      
       .no-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
     </style>
+
+<link rel="stylesheet" href="/index.css">
   <script type="importmap">
 {
   "imports": {
@@ -70,10 +78,9 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <script type="module" crossorigin src="/smart-chef/assets/index-C7B4pa6x.js"></script>
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
