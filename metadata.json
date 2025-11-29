@@ -1,0 +1,7 @@
+{
+  "name": "SmartChef - Visual Recipe Assistant",
+  "description": "Snap a photo of your ingredients or list them to get instant recipe recommendations with animated prep instructions.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
